@@ -17,8 +17,8 @@ bool comp(struct item item1,struct item item2)
   }
 int main()
 {
- int n,knapsack_value=0;
- double capacity;
+ int n;
+ double capacity,knapsack_value=0;
  cout <<"enter number of items"<<endl;
  cin >>n;
  cout <<"enter capacity of knapsack"<<endl;
@@ -42,6 +42,7 @@ int main()
      else
         {
          knapsack_value+=capacity/arr[i].weight*arr[i].value;
+         capacity=0;
         }
      if(capacity==0)
        break;
